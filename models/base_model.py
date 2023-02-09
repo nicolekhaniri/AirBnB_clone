@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import uuid
 import datetime
+from models.engine.FileStorage import storage
 
 """Class BaseModel that defines all common attributes/methods for other classes"""
 class BaseModel:
@@ -23,11 +24,13 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            storage.new(self)
 
     """Public instance methods"""
     def save(self):
         """updating time to now"""
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """returns dictionary containing keys and values of instances"""
