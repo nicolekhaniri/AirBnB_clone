@@ -32,6 +32,15 @@ class FileStorage:
                         FileStorage.__objects[key] = BaseModel(**obj_dict)
                     if class_name == "User":
                          FileStorage.__objects[key] = User(**obj_dict)
-
+                    if class_name == "Place":
+                         FileStorage.__objects[key] = Place(**obj_dict)
+                    if class_name == "State":
+                         FileStorage.__objects[key] = State(**obj_dict)
+                    if class_name == "City":
+                         FileStorage.__objects[key] = City(**obj_dict)
+                    if class_name == "Amenity":
+                         FileStorage.__objects[key] = Amenity**obj_dict)
+                    if class_name == "Review":
+                         FileStorage.__objects[key] = Review(**obj_dict)
         except FileNotFoundError:
             pass
