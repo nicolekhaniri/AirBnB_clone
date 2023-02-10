@@ -39,7 +39,7 @@ class FileStorage:
                     if class_name == "City":
                          FileStorage.__objects[key] = City(**obj_dict)
                     if class_name == "Amenity":
-                         FileStorage.__objects[key] = Amenity**obj_dict)
+                        FileStorage.__objects[key] = Amenity(**obj_dict)
                     if class_name == "Review":
                          FileStorage.__objects[key] = Review(**obj_dict)
         except FileNotFoundError:

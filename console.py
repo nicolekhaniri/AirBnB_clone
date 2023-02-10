@@ -8,13 +8,13 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 from models.amenity import Amenity
-Class_Dict = {"BaseModel": BaseModel, "User": User, "City": City, "Place": Place: "Review": Review, "State": State, "Amenity": Amenity}
+Class_Dict = {"BaseModel": BaseModel, "User": User, "City": City, "Place": Place, "Review": Review, "State": State, "Amenity": Amenity}
 
 """Command interprater that uses quit and EOF to exit the program, help and an empty line that does not execute anything.
 """
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb)'
-    classes = {"BaseModel": BaseModel, "User": User, "City": City, "Place": Place: "Review": Review, "State": State, "Amenity": Amenity}
+    classes = {"BaseModel": BaseModel, "User": User, "City": City, "Place": Place, "Review": Review, "State": State, "Amenity": Amenity}
 
     """Question 7"""
 
