@@ -3,7 +3,10 @@ import uuid
 import datetime
 from models.engine.FileStorage import storage
 
-"""Class BaseModel that defines all common attributes/methods for other classes"""
+"""Class BaseModel that defines all common
+attributes/methods for other classes"""
+
+
 class BaseModel:
     """Public instance attribute"""
     def __init__(self, *args, **kwargs):
@@ -13,7 +16,7 @@ class BaseModel:
         date_format = "%Y-%m-%dT%H:%M:%S.%f"
         if **kwargs:
             """exists"""
-            for key,value in kwargs.items():
+            for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
                     value = datetime.strptime(value, date_format)
                 else:
@@ -39,10 +42,12 @@ class BaseModel:
         dict_rep["created_at"] = self.created_at.isformat()
         dict_rep["updated_at"] = self.updated_at.isformat()
         return dict_rep
-    
 
-    """This is last"""
-    def __str__(self):
-        """To return the str rep of BaseModel instance"""
-        clsn = self.__class__.__name__
-        return "[{}] ({}) {}".format(clsn, self.id, __dict__)
+
+g"""This is last"""
+
+
+def __str__(self):
+    """To return the str rep of BaseModel instance"""
+    clsn = self.__class__.__name__
+    return "[{}] ({}) {}".format(clsn, self.id, __dict__)
