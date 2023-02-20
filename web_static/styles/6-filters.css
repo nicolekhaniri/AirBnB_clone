@@ -1,76 +1,136 @@
-/* search bar */
-div.container {
-    max-width: 1000px;
-    margin: 30px auto;
-    /* text-align: center; */
-}
-section.filters {
-    background-color: white;
+.filters{
+    color: white;
     height: 70px;
     width: 100%;
-    border: 1px solid #DDDDDD;
+    border: 1px solid; 
+    border-color: #DDDDDD;
     border-radius: 4px;
+    text-align: right;
+    display: flex;
+    align-items: center;
 }
-section.filters button {
+button{
+    font-size: 18px;
     background-color: #FF5A5F;
+    color: #FFFFFF;
     height: 48px;
     width: 20%;
-    border: 0;
     border-radius: 4px;
-    font-size: 18px;
-    color: #FFFFFF;
-    float: right;
-    margin: 11px 30px;
+    border: none;
+    opacity: 90%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 30px;
 }
-section.filters button:hover {
-    opacity: .9;
-}
-/* location and amenities part of search bar */
-.locations,
-.amenities {
+
+
+.locations{
     height: 100%;
     width: 25%;
-    float: left;
-}
-.locations {
-    border-right: 1px solid #DDDDDD;
-}
-.locations h3,
-.amenities h3 {
-    font-weight: 600;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 0px;
+    border-right: #DDDDDD 1px;
     text-align: left;
-    margin-left: 30px;
+    margin-left: 40px;
+    vertical-align: middle;
+    display: inline-block;
+
 }
-.locations h4,
-.amenities h4 {
+
+.amenities{
+    height: 100%;
+    width: 25%;
+    border-right: #DDDDDD 1px;
+    text-align: left;
+    margin-left: 40px;
+    
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.amenities h3, .locations h3{
+    font-weight: 600;
+    color: black;
+    margin: 12px;
+    text-align: center;
+}
+
+.amenities h4, .locations h4{
     font-weight: 400;
     font-size: 14px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: left;
-    margin-left: 30px;
+    color: black;
+    margin: 0;
+    text-align: center;
 }
-/* display location and amenities options upon hover */
-.popover {
+
+.locations h2{
+    font-weight: 600;
+    color: black;
+    margin: 12px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.locations li{
+    color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+
+.popover{
     display: none;
-    background-color: #FAFAFA;
-    border: 1px solid #DDDDDD;
+    color: #FAFAFA;
+    width: 100px;
+    border: #DDDDDD 1px;
     border-radius: 4px;
-    position: relative;
-    z-index: 1;
+    margin-left: -41px;
+    margin-top: 13px;
+    box-sizing: border-box;
 }
-.popover h2 {
-    font-size: 16px;
+
+button:hover{
+    opacity: 1;
 }
-li {
+
+.popover li {
     list-style-type: none;
-    margin-top:10px;
-    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
 }
-.locations:hover .popover,
+
+.popover h2 {
+    margin-bottom: 5px;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.popover ul {
+    margin-top: 5px;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.locations .popover ul {
+    padding-left: 20px;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.locations:hover .popover {
+    display: block;
+    padding-left: 18px;
+}
+
 .amenities:hover .popover {
     display: block;
 }
