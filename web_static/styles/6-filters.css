@@ -41,7 +41,6 @@ button{
     border-right: #DDDDDD 1px;
     text-align: left;
     margin-left: 40px;
-    
     vertical-align: middle;
     display: inline-block;
 }
@@ -62,6 +61,12 @@ button{
 }
 
 .locations h2{
+    height: 100%;
+    width: 25%;
+    border-right: #DDDDDD 1px;
+    margin-left: 40px;
+    vertical-align: middle;
+    display: inline-block;
     font-weight: 600;
     color: black;
     margin: 12px;
@@ -71,9 +76,14 @@ button{
 }
 
 .locations li{
+    height: 100%;
+    width: 25%;
+    border-right: #DDDDDD 1px;
+    margin-left: 40px;
+    vertical-align: middle;
+    display: inline-block;
     color: black;
     text-align: center;
-    display: flex;
     align-items: center;
 }
 
@@ -104,7 +114,7 @@ button:hover{
 .popover h2 {
     margin-bottom: 5px;
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
     vertical-align: middle;
     display: inline-block;
@@ -134,3 +144,4 @@ button:hover{
 .amenities:hover .popover {
     display: block;
 }
+
